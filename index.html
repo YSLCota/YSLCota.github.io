@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chenyou Guo (郭宸佑) - Homepage</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 2rem 20px;
+            background-color: #FAFAFA;
+        }
+        .header {
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1 {
+            margin: 0 0 0.5rem 0;
+            color: #111;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+        .contact-info a {
+            color: #0366d6;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            color: #24292e;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 0.3rem;
+            margin-top: 2rem;
+        }
+        .item {
+            margin-bottom: 1.5rem;
+        }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .item-title {
+            color: #000;
+        }
+        .item-date {
+            color: #666;
+            font-weight: normal;
+        }
+        .item-subtitle {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+        ul {
+            padding-left: 20px;
+            margin-top: 0.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #e1f0fe;
+            color: #0366d6;
+            padding: 0.2em 0.6em;
+            border-radius: 3px;
+            font-size: 0.85em;
+            margin-right: 5px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <h1>Chenyou Guo (郭宸佑)</h1>
+            <div class="subtitle">Undergraduate Student | Ocean University of China</div>
+            <div class="contact-info">
+                <a href="mailto:2898468159@qq.com">📧 2898468159@qq.com</a>
+                <span>📍 Qingdao, China</span>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <p>I am an undergraduate student majoring in Physics at Ocean University of China. My research interests lie at the intersection of <strong>Large Language Models (LLMs)</strong> and <strong>Physics/Geosciences (AI for Science)</strong>. I am highly passionate about LLM fine-tuning, computational physics, and developing vertical-domain AI solutions for complex scientific reasoning.</p>
+    </div>
+
+    <h2>Education</h2>
+    <div class="item">
+        <div class="item-header">
+            <span class="item-title">Ocean University of China (OUC)</span>
+            <span class="item-date">Sep 2025 – Present</span>
+        </div>
+        <div class="item-subtitle">B.S. in Physics (Sino-foreign Cooperative Education)</div>
+        <ul>
+            <li><strong>GPA:</strong> 3.92/4.0 (Top 10%, Rank: 6/60)</li>
+            <li><strong>Key Coursework:</strong> Advanced Mathematics (100), Introduction to Analog Electronics (99), Mechanics Physics Simulation (99).</li>
+        </ul>
+    </div>
+
+    <h2>Research & Projects</h2>
+    
+    <div class="item">
+        <div class="item-header">
+            <span class="item-title">Geo-Expert: Vertical Domain Large Language Model for Geology</span>
+            <span class="item-date">Sep 2025 – Present</span>
+        </div>
+        <div class="item-subtitle">Core Developer | <em>ICML 2026 (In preparation), 1 National Patent (Pending)</em></div>
+        <ul>
+            <li>Spearheaded the development of a geological LLM to mitigate hallucination in complex reasoning (e.g., deep structures, deep-time evolution).</li>
+            <li>Constructed an instruction dataset of 11,518 high-quality entries utilizing "Chapter-aware Recursive Chunking" and "Domain Tree" algorithms combined with strong-model distillation.</li>
+            <li>Executed efficient LoRA fine-tuning on various base models via the <strong>ms-swift</strong> framework.</li>
+            <li>Developed <strong>Geo-Eval</strong>, a benchmark tailored for solid earth science reasoning, and designed an LLM-as-a-Judge adversarial pipeline to validate boundary samples.</li>
+        </ul>
+    </div>
+
+    <div class="item">
+        <div class="item-header">
+            <span class="item-title">Sea Surface Temperature (SST) Imputation System based on Flow Matching</span>
+            <span class="item-date">Dec 2025 – Present</span>
+        </div>
+        <div class="item-subtitle">Project Member | <em>1 National Patent (Pending)</em></div>
+        <ul>
+            <li>Investigated the fundamental architecture of 3D-CNN spatiotemporal features and conditional flow matching generative models.</li>
+            <li>Analyzed PyTorch source code for the optimal transport interpolation path, velocity field prediction guided by multiple conditions, and ODE solver loops.</li>
+            <li>Authored technical solutions for the full-image inpainting module and the multi-stage joint loss function, assisting in the patent application process.</li>
+        </ul>
+    </div>
+
+    <div class="item">
+        <div class="item-header">
+            <span class="item-title">2026 MCM/ICM: Merit & Popularity Decoupling Model in Talent Shows</span>
+            <span class="item-date">Jan 2026 – Feb 2026</span>
+        </div>
+        <div class="item-subtitle">Team Captain / Lead Modeler</div>
+        <ul>
+            <li>Constructed a Sequential Importance Resampling (SIR) particle filter model to infer latent audience voting distributions from 34 seasons of historical data (96% prediction accuracy).</li>
+            <li>Engineered a multiple regression framework and innovated a Game-Theory-based "Skill-Anchored Popularity Model" to eliminate extreme bias while maintaining entertainment value.</li>
+        </ul>
+    </div>
+
+    <h2>Skills</h2>
+    <div class="item">
+        <ul>
+            <li><strong>Programming & Frameworks:</strong> Python, PyTorch, MATLAB.</li>
+            <li><strong>LLM Training & Deployment:</strong> LoRA fine-tuning, ms-swift, Linux Server Deployment, Multi-GPU Scheduling.</li>
+            <li><strong>Simulation & Tools:</strong> Mathematical Modeling, Numerical Simulation, LaTeX, Markdown.</li>
+        </ul>
+    </div>
+
+</body>
+</html>
