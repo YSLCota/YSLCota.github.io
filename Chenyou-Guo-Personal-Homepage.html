@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chenyou Guo - Academic Homepage</title>
+  <meta
+    name="description"
+    content="Academic homepage of Chenyou Guo, undergraduate student in Computational Physics at Ocean University of China."
+  />
+  <style>
+    :root {
+      --text: #222;
+      --muted: #666;
+      --light: #f6f8fa;
+      --line: #e5e7eb;
+      --link: #1f6f9f;
+      --link-dark: #174f72;
+      --accent: #a94442;
+      --bg: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "PingFang SC",
+        "Microsoft YaHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--link-dark);
+      text-decoration: underline;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .wrap {
+      width: min(1040px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .topnav {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.96);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .topnav .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 58px;
+    }
+
+    .site-title {
+      color: var(--text);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 230px;
+      gap: 42px;
+      align-items: start;
+      padding: 56px 0 40px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .label {
+      margin: 0 0 6px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      color: #111;
+      font-size: clamp(2.2rem, 6vw, 3.25rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+      font-weight: 720;
+    }
+
+    .chinese-name {
+      margin-left: 10px;
+      color: var(--muted);
+      font-size: 0.55em;
+      font-weight: 500;
+      vertical-align: 8%;
+    }
+
+    .subtitle {
+      margin: 0 0 18px;
+      color: #444;
+      font-size: 1.08rem;
+    }
+
+    .bio {
+      max-width: 720px;
+      margin: 0 0 18px;
+      color: #333;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .links span::after {
+      content: "/";
+      margin-left: 14px;
+      color: #c4c8ce;
+    }
+
+    .links span:last-child::after {
+      content: "";
+      margin: 0;
+    }
+
+    .portrait-card {
+      display: grid;
+      justify-items: center;
+      gap: 14px;
+    }
+
+    .portrait {
+      width: 214px;
+      aspect-ratio: 1;
+      border-radius: 6px;
+      object-fit: cover;
+      object-position: 52% 24%;
+      border: 1px solid var(--line);
+      background: var(--light);
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-align: left;
+    }
+
+    .logo-row img {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+
+    section {
+      padding: 32px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section:last-of-type {
+      border-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      color: #111;
+      font-size: 1.45rem;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0;
+      color: #111;
+      font-size: 1.04rem;
+      line-height: 1.35;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr);
+      gap: 24px;
+    }
+
+    .side-label {
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .news-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .news-item {
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr);
+      gap: 18px;
+      align-items: baseline;
+    }
+
+    .date {
+      color: var(--muted);
+      font-size: 0.92rem;
+      white-space: nowrap;
+    }
+
+    .publication-list {
+      display: grid;
+      gap: 22px;
+    }
+
+    .publication {
+      display: grid;
+      grid-template-columns: 132px minmax(0, 1fr);
+      gap: 20px;
+      align-items: start;
+    }
+
+    .pub-thumb {
+      min-height: 96px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      color: var(--link);
+      background:
+        linear-gradient(135deg, rgba(31, 111, 159, 0.08), rgba(169, 68, 66, 0.04)),
+        var(--light);
+      font-size: 0.86rem;
+      font-weight: 700;
+      text-align: center;
+      padding: 14px;
+    }
+
+    .pub-meta {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .pub-desc {
+      margin-top: 8px;
+      color: #444;
+      font-size: 0.96rem;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-top: 9px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      color: #fff;
+      background: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .tag.subtle {
+      color: #7a4a00;
+      background: #fff1cc;
+    }
+
+    .entry-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .entry {
+      display: grid;
+      gap: 4px;
+    }
+
+    .entry-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: baseline;
+    }
+
+    .entry-meta {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .course-list,
+    .skill-list {
+      margin: 8px 0 0;
+      padding-left: 1.2em;
+      color: #444;
+    }
+
+    .course-list li,
+    .skill-list li {
+      margin: 3px 0;
+    }
+
+    .interest-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .interest-list span {
+      padding: 4px 9px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      color: #444;
+      background: var(--light);
+      font-size: 0.92rem;
+    }
+
+    footer {
+      padding: 32px 0 46px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 760px) {
+      .wrap {
+        width: min(100% - 28px, 1040px);
+      }
+
+      .topnav .wrap {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px 0;
+      }
+
+      .nav-links {
+        width: 100%;
+        overflow-x: auto;
+        gap: 14px;
+        padding-bottom: 3px;
+      }
+
+      .hero,
+      .two-col,
+      .publication {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        gap: 24px;
+        padding-top: 34px;
+      }
+
+      .portrait-card {
+        justify-items: start;
+      }
+
+      .portrait {
+        width: min(220px, 70vw);
+      }
+
+      .news-item {
+        grid-template-columns: 76px minmax(0, 1fr);
+        gap: 12px;
+      }
+
+      .entry-top {
+        display: grid;
+        gap: 2px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topnav">
+    <div class="wrap">
+      <a class="site-title" href="#top">Chenyou Guo</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#research">Research</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+    <div class="hero">
+      <div>
+        <p class="label">Academic Homepage</p>
+        <h1>Chenyou Guo <span class="chinese-name">郭宸佑</span></h1>
+        <p class="subtitle">
+          Undergraduate Student, Ocean University of China
+        </p>
+        <p class="bio">
+          I am a first-year undergraduate student in Computational Physics at Ocean University of China.
+          My research interests include domain-specific large language models, AI for Science,
+          computer vision, high-performance computing, and research infrastructure.
+        </p>
+        <div class="links" aria-label="Contact links">
+          <span><a href="mailto:guochenyou@stu.ouc.edu.cn">Email</a></span>
+          <span><a href="https://openreview.net/profile?id=%7EChenyou_Guo2" target="_blank" rel="noreferrer">OpenReview</a></span>
+          <span>Qingdao, Shandong</span>
+          <span>Panzhihua, Sichuan</span>
+        </div>
+      </div>
+
+      <aside class="portrait-card" aria-label="Portrait and affiliation">
+        <img
+          class="portrait"
+          src="Chenyou-Guo-Homepage-assets/chenyou-guo-portrait.jpg"
+          alt="Portrait of Chenyou Guo"
+        />
+        <div class="logo-row">
+          <img src="Chenyou-Guo-Homepage-assets/ouc-logo.png" alt="Ocean University of China logo" />
+          <span>Ocean University of China</span>
+        </div>
+      </aside>
+    </div>
+
+    <section id="about">
+      <div class="two-col">
+        <div class="side-label">About</div>
+        <div>
+          <h2>Research profile</h2>
+          <p>
+            I am interested in building intelligent systems that can reason over scientific domains.
+            My current work focuses on domain adaptation, expert-level evaluation, and robust
+            multimodal reasoning. I also enjoy the engineering side of research, including Linux
+            environments, multi-GPU scheduling, reproducible experiments, and clean technical writing.
+          </p>
+          <div class="interest-list" aria-label="Research interests">
+            <span>Domain-Specific LLMs</span>
+            <span>AI for Science</span>
+            <span>Computer Vision</span>
+            <span>HPC</span>
+            <span>AI Infrastructure</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="news">
+      <div class="two-col">
+        <div class="side-label">News</div>
+        <div>
+          <h2>News and highlights</h2>
+          <div class="news-list">
+            <div class="news-item">
+              <span class="date">Jun 2026</span>
+              <span>Geo-Expert was accepted by the ICML 2026 AI for Science Workshop.</span>
+            </div>
+            <div class="news-item">
+              <span class="date">May 2026</span>
+              <span>Motif Matching with Structure-Semantic Signatures was submitted to NeurIPS 2026.</span>
+            </div>
+            <div class="news-item">
+              <span class="date">2026</span>
+              <span>Two national invention patents filed and currently under review.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="two-col">
+        <div class="side-label">Research</div>
+        <div>
+          <h2>Selected research and projects</h2>
+          <div class="publication-list">
+            <article class="publication">
+              <div class="pub-thumb">Geo-Expert</div>
+              <div>
+                <h3>Geo-Expert: Expert-Level Geological Reasoning via Parameter-Efficient Fine-Tuning</h3>
+                <p class="pub-meta">
+                  <strong>Chenyou Guo</strong> · ICML 2026 AI for Science Workshop
+                </p>
+                <p class="pub-desc">
+                  We present Geo-Expert, a parameter-efficient geological LLM framework, and establish
+                  Geo-Eval, a benchmark for geological reasoning.
+                </p>
+                <span class="tag">Accepted</span>
+              </div>
+            </article>
+
+            <article class="publication">
+              <div class="pub-thumb">Motif Matching</div>
+              <div>
+                <h3>Motif Matching with Structure-Semantic Signatures for Robust CLIP Test-Time Adaptation</h3>
+                <p class="pub-meta">
+                  Second Author · First Student · NeurIPS 2026
+                </p>
+                <p class="pub-desc">
+                  Motif-based reasoning enhances test-time adaptation by integrating semantic and structural
+                  information for robust out-of-distribution and cross-domain generalization.
+                </p>
+                <span class="tag subtle">Under Review</span>
+              </div>
+            </article>
+
+            <article class="publication">
+              <div class="pub-thumb">Pattern Recognition</div>
+              <div>
+                <h3>Additional research manuscript under review</h3>
+                <p class="pub-meta">Third Author · Pattern Recognition</p>
+                <p class="pub-desc">
+                  One additional paper is currently under review at <em>Pattern Recognition</em>.
+                </p>
+                <span class="tag subtle">Under Review</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="two-col">
+        <div class="side-label">Education</div>
+        <div>
+          <h2>Academic training</h2>
+          <div class="entry-list">
+            <div class="entry">
+              <div class="entry-top">
+                <h3>Ocean University of China</h3>
+                <span class="date">Sep 2025 - Present</span>
+              </div>
+              <p class="entry-meta">B.S. in Computational Physics · First-year undergraduate study</p>
+              <p>GPA: 3.92 / 4.00, equivalent to 94.93 / 100</p>
+              <ul class="course-list">
+                <li>Intro Analog Electronics: 100 / 100</li>
+                <li>Mechanics Physical Simulations: 99 / 100</li>
+                <li>Academic English I: 95 / 100</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="two-col">
+        <div class="side-label">Experience</div>
+        <div>
+          <h2>Research experience</h2>
+          <div class="entry-list">
+            <div class="entry">
+              <div class="entry-top">
+                <h3>Geo-Expert Project</h3>
+                <span class="date">Nov 2025 - May 2026</span>
+              </div>
+              <p class="entry-meta">First Author · Core Leader</p>
+              <p>
+                Led a domain-specific LLM project for expert-level geological reasoning, including framework
+                design, benchmark construction, and experimental iteration.
+              </p>
+            </div>
+
+            <div class="entry">
+              <div class="entry-top">
+                <h3>Motif Matching Project</h3>
+                <span class="date">Dec 2025 - May 2026</span>
+              </div>
+              <p class="entry-meta">Second Author · First Student</p>
+              <p>
+                Contributed to a robust CLIP test-time adaptation method using structure-semantic signatures
+                for out-of-distribution and cross-domain generalization.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="two-col">
+        <div class="side-label">Skills</div>
+        <div>
+          <h2>Technical skills</h2>
+          <ul class="skill-list">
+            <li><strong>Programming and frameworks:</strong> Python, PyTorch, MATLAB</li>
+            <li><strong>Engineering:</strong> Linux server deployment, multi-GPU computing resource scheduling</li>
+            <li><strong>Research tools:</strong> LaTeX, Microsoft Office, benchmark design, technical writing</li>
+            <li><strong>Workflow:</strong> Vibe Coding Workflow, collaborative documentation, experiment organization</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>© 2026 Chenyou Guo · Last updated: June 2026</p>
+  </footer>
+</body>
+</html>
