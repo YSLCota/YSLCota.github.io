@@ -3,11 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chenyou Guo - Academic Homepage</title>
+  <title>Chenyou Guo (郭宸佑) - Homepage</title>
   <meta
     name="description"
-    content="Academic homepage of Chenyou Guo, undergraduate student in Computational Physics at Ocean University of China."
+    content="Homepage of Chenyou Guo (郭宸佑), second-year Computational Physics undergraduate at Ocean University of China and research intern at IIIS, Tsinghua University. Research: Embodied AI, VLM, World Model, and domain-specific large language models."
   />
+  <link rel="canonical" href="https://yslcota.github.io/" />
+  <meta name="author" content="Chenyou Guo, 郭宸佑" />
+  <meta property="og:title" content="Chenyou Guo (郭宸佑) - Homepage" />
+  <meta property="og:description" content="郭宸佑 · 中国海洋大学本科生 · 清华大学交叉信息研究院研究实习生。Embodied AI, VLM, World Model, and domain-specific large language models." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://yslcota.github.io/" />
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Chenyou Guo", "alternateName": "郭宸佑", "url": "https://yslcota.github.io/", "sameAs": ["https://scholar.google.com/citations?user=2VWC7v8AAAAJ", "https://openreview.net/profile?id=~Chenyou_Guo2"], "affiliation": [{"@type": "Organization", "name": "Ocean University of China"}, {"@type": "Organization", "name": "Institute for Interdisciplinary Information Sciences, Tsinghua University"}]}</script>
   <style>
     :root {
       --text: #222;
@@ -408,6 +415,34 @@
         gap: 2px;
       }
     }
+
+    /* Affiliation marks, research experience cards, and publication figures. */
+    section { scroll-margin-top: 82px; }
+    .affiliations { margin: 20px 0 24px; color: #444; font-size: 1rem; }
+    .affiliations p + p { margin-top: 9px; }
+    .hero { grid-template-columns: minmax(0, 1fr) 214px; gap: 36px; }
+    .portrait-card { padding-top: 32px; }
+    .experience-list { display: grid; gap: 14px; }
+    .experience-card { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 18px; padding: 20px; border: 1px solid var(--line); border-radius: 6px; }
+    .experience-logo { width: 48px; height: 48px; object-fit: contain; margin-top: 2px; }
+    .experience-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+    .experience-heading h3, .degree-title { font-weight: 500; }
+    .institution { color: #444; margin: 6px 0; }
+    .advisor { color: var(--muted); font-size: .94rem; }
+    .education-stats { margin-top: 12px; font-size: .94rem; color: #444; }
+    .education-stats span { color: #aaa; margin: 0 8px; }
+    .publication { grid-template-columns: 200px minmax(0, 1fr); }
+    .pub-figure { display: flex; align-items: center; min-height: 130px; border: 1px solid var(--line); border-radius: 6px; padding: 7px; background: white; }
+    .pub-figure img { width: 100%; height: auto; }
+    .paper-link { margin-left: 10px; font-size: .85rem; font-weight: 600; }
+    @media (max-width: 760px) {
+      .hero, .publication { grid-template-columns: 1fr; }
+      .experience-card { padding: 16px; gap: 14px; }
+      .experience-heading { flex-direction: column; gap: 3px; }
+      .portrait-card { padding-top: 0; }
+      .pub-figure { width: min(100%, 360px); }
+      section { scroll-margin-top: 110px; }
+    }
   </style>
 </head>
 <body>
@@ -415,12 +450,7 @@
     <div class="wrap">
       <a class="site-title" href="#top">Chenyou Guo</a>
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#news">News</a>
-        <a href="#research">Research</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
+        <a href="#news">News</a><a href="#experience">Experience</a><a href="#research">Research</a><a href="#education">Education</a>
       </nav>
     </div>
   </header>
@@ -428,21 +458,18 @@
   <main id="top" class="wrap">
     <div class="hero">
       <div>
-        <p class="label">Academic Homepage</p>
+        <p class="label">Homepage</p>
         <h1>Chenyou Guo <span class="chinese-name">郭宸佑</span></h1>
-        <p class="subtitle">
-          Undergraduate Student, Ocean University of China
-        </p>
-        <p class="bio">
-          I am a first-year undergraduate student in Computational Physics at Ocean University of China.
-          My research interests include domain-specific large language models, AI for Science,
-          computer vision, high-performance computing, and research infrastructure.
-        </p>
+        <div class="affiliations">
+          <p>Undergraduate Student, Ocean University of China</p>
+          <p>Research Intern, Institute for Interdisciplinary Information Sciences, Tsinghua University</p>
+        </div>
+        <p class="bio">Nice to meet you👋 I am a second-year undergraduate student in Computational Physics at Ocean University of China. My research interests include Embodied AI, VLM, World Model, and domain-specific large language models. My goal is to build comprehensive spatial intelligence that enables AI to perceive, reason about, and act in the physical world.</p>
         <div class="links" aria-label="Contact links">
           <span><a href="mailto:guochenyou@stu.ouc.edu.cn">Email</a></span>
           <span><a href="https://openreview.net/profile?id=%7EChenyou_Guo2" target="_blank" rel="noreferrer">OpenReview</a></span>
-          <span>Qingdao, Shandong</span>
-          <span>Panzhihua, Sichuan</span>
+          <span><a href="https://scholar.google.com/citations?user=2VWC7v8AAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Google Scholar</a></span>
+          <span><a href="https://www.xiaohongshu.com/user/profile/65bf5731000000000903f934" target="_blank" rel="noreferrer">Xiaohongshu</a></span>
         </div>
       </div>
 
@@ -452,48 +479,24 @@
           src="Chenyou-Guo-Homepage-assets/chenyou-guo-portrait.jpg"
           alt="Portrait of Chenyou Guo"
         />
-        <div class="logo-row">
-          <img src="Chenyou-Guo-Homepage-assets/ouc-logo.png" alt="Ocean University of China logo" />
-          <span>Ocean University of China</span>
-        </div>
+
       </aside>
     </div>
 
-    <section id="about">
-      <div class="two-col">
-        <div class="side-label">About</div>
-        <div>
-          <h2>Research profile</h2>
-          <p>
-            I am interested in building intelligent systems that can reason over scientific domains.
-            My current work focuses on domain adaptation, expert-level evaluation, and robust
-            multimodal reasoning. I also enjoy the engineering side of research, including Linux
-            environments, multi-GPU scheduling, reproducible experiments, and clean technical writing.
-          </p>
-          <div class="interest-list" aria-label="Research interests">
-            <span>Domain-Specific LLMs</span>
-            <span>AI for Science</span>
-            <span>Computer Vision</span>
-            <span>HPC</span>
-            <span>AI Infrastructure</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="news">
+<section id="news">
       <div class="two-col">
         <div class="side-label">News</div>
         <div>
           <h2>News and highlights</h2>
           <div class="news-list">
             <div class="news-item">
-              <span class="date">July 2026</span>
-              <span><em>SIGHT: From Imagination to Evidence via Active Spatial Hypothesis Testing</em> was completed and submitted.</span>
+              <span class="date">Sep 2026</span>
+              <span><em>SIGHT: From Imagination to Evidence via Active Spatial Hypothesis Testing</em> was submitted for review.</span>
             </div>
+            <div class="news-item"><span class="date">Sep 2026</span><span>Awarded the National Scholarship and the University First-Class Scholarship.</span></div>
             <div class="news-item">
               <span class="date">Jun 2026</span>
-              <span><em>Multi-view Semantic-Guided Domain Adaptive Semantic Segmentation through Cross-modality Motif Matching</em> was accepted by <em>Pattern Recognition</em>.</span>
+              <span><a href="https://doi.org/10.1016/j.patcog.2026.114323" target="_blank" rel="noreferrer"><em>Multi-view Semantic-Guided Domain Adaptive Semantic Segmentation through Cross-modality Motif Matching</em></a> was accepted by <em>Pattern Recognition</em>.</span>
             </div>
             <div class="news-item">
               <span class="date">Jun 2026</span>
@@ -501,8 +504,47 @@
             </div>
             <div class="news-item">
               <span class="date">Jun 2026</span>
-              <span>Geo-Expert was accepted by the ICML 2026 AI for Science Workshop.</span>
+              <span><a href="https://arxiv.org/abs/2605.24844" target="_blank" rel="noreferrer">Geo-Expert</a> was accepted by the ICML 2026 AI for Science Workshop.</span>
             </div>
+            <div class="news-item">
+              <span class="date">May 2026</span>
+              <span>Motif Matching with Structure-Semantic Signatures was submitted for review.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="two-col">
+        <div class="side-label">Experience</div>
+        <div>
+          <h2>Research experience</h2>
+          <div class="experience-list">
+            <article class="experience-card">
+              <img class="experience-logo" src="Chenyou-Guo-Homepage-assets/tsinghua-logo.png" alt="Tsinghua University logo" />
+              <div class="experience-details">
+                <div class="experience-heading"><h3>Research Intern</h3><span class="date">Sep 2026 – Present</span></div>
+                <p class="institution">Institute for Interdisciplinary Information Sciences, Tsinghua University</p>
+                <p class="advisor">Advisor: <a href="https://www.mengdixu.me" target="_blank" rel="noreferrer">Mengdi Xu</a></p>
+              </div>
+            </article>
+            <article class="experience-card">
+              <img class="experience-logo" src="Chenyou-Guo-Homepage-assets/ouc-logo.png" alt="Ocean University of China logo" />
+              <div class="experience-details">
+                <div class="experience-heading"><h3>Research Intern</h3><span class="date">Mar 2026 – Present</span></div>
+                <p class="institution">VLM Group, Ocean University of China</p>
+                <p class="advisor">Advisor: <a href="https://yaboliudotug.github.io" target="_blank" rel="noreferrer">Yabo Liu</a></p>
+              </div>
+            </article>
+            <article class="experience-card">
+              <img class="experience-logo" src="Chenyou-Guo-Homepage-assets/ouc-logo.png" alt="Ocean University of China logo" />
+              <div class="experience-details">
+                <div class="experience-heading"><h3>Research Intern</h3><span class="date">Oct 2025 – Aug 2026</span></div>
+                <p class="institution">Kunling Lab, Ocean University of China</p>
+                <p class="advisor">Advisor: <a href="https://cmg.ouc.edu.cn/2024/1227/c30164a492019/page.htm" target="_blank" rel="noreferrer">Ze Liu</a></p>
+              </div>
+            </article>
           </div>
         </div>
       </div>
@@ -529,9 +571,9 @@
             </article>
 
             <article class="publication">
-              <div class="pub-thumb">Geo-Expert</div>
+              <a class="pub-figure" href="Chenyou-Guo-Homepage-assets/geo-expert-framework.png" target="_blank" rel="noreferrer" aria-label="View full-size Geo-Expert framework"><img src="Chenyou-Guo-Homepage-assets/geo-expert-framework.png" alt="Geo-Expert framework overview" loading="lazy" /></a>
               <div>
-                <h3>Geo-Expert: Expert-Level Geological Reasoning via Parameter-Efficient Fine-Tuning</h3>
+                <h3><a href="https://arxiv.org/abs/2605.24844" target="_blank" rel="noreferrer">Geo-Expert: Towards Expert-Level Geological Reasoning via Parameter-Efficient Fine-Tuning</a></h3>
                 <p class="pub-meta">
                   <strong>First Author</strong> · ICML 2026 AI for Science Workshop
                 </p>
@@ -539,7 +581,7 @@
                   We present Geo-Expert, a parameter-efficient geological LLM framework, and establish
                   Geo-Eval, a benchmark for geological reasoning.
                 </p>
-                <span class="tag">Accepted</span>
+                <span class="tag">Accepted</span> <a class="paper-link" href="https://arxiv.org/abs/2605.24844" target="_blank" rel="noreferrer">Paper ↗</a>
               </div>
             </article>
 
@@ -559,15 +601,15 @@
             </article>
 
             <article class="publication">
-              <div class="pub-thumb">Pattern Recognition</div>
+              <a class="pub-figure" href="Chenyou-Guo-Homepage-assets/motif-matching-framework.png" target="_blank" rel="noreferrer" aria-label="View full-size Pattern Recognition framework"><img src="Chenyou-Guo-Homepage-assets/motif-matching-framework.png" alt="Pattern Recognition framework overview" loading="lazy" /></a>
               <div>
-                <h3>Multi-view Semantic-Guided Domain Adaptive Semantic Segmentation through Cross-modality Motif Matching</h3>
+                <h3><a href="https://doi.org/10.1016/j.patcog.2026.114323" target="_blank" rel="noreferrer">Multi-view Semantic-Guided Domain Adaptive Semantic Segmentation through Cross-modality Motif Matching</a></h3>
                 <p class="pub-meta">Third Author · Pattern Recognition</p>
                 <p class="pub-desc">
                   This work studies semantic-guided domain adaptive semantic segmentation through
                   cross-modality motif matching.
                 </p>
-                <span class="tag">Accepted</span>
+                <span class="tag">Accepted</span> <a class="paper-link" href="https://doi.org/10.1016/j.patcog.2026.114323" target="_blank" rel="noreferrer">Paper ↗</a>
               </div>
             </article>
           </div>
@@ -579,95 +621,18 @@
       <div class="two-col">
         <div class="side-label">Education</div>
         <div>
-          <h2>Academic training</h2>
-          <div class="entry-list">
-            <div class="entry">
-              <div class="entry-top">
-                <h3>Ocean University of China</h3>
-                <span class="date">Sep 2025 - Present</span>
-              </div>
-              <p class="entry-meta">B.S. in Computational Physics · First-year undergraduate study</p>
-              <p>GPA: 3.937 / 4.00 · Average score: 95.480 / 100 · Rank: 3</p>
-            </div>
-          </div>
+          <h2>Education</h2>
+          <div class="entry-top"><h3 class="degree-title">B.S. in Computational Physics</h3><span class="date">Sep 2025 – Present</span></div>
+          <p class="entry-meta">Second-year undergraduate</p>
+          <p class="education-stats">GPA: 3.937 / 4.00 <span>·</span> Average score: 95.480 / 100 <span>·</span> Rank: 3</p>
         </div>
       </div>
     </section>
 
-    <section id="experience">
-      <div class="two-col">
-        <div class="side-label">Experience</div>
-        <div>
-          <h2>Research experience</h2>
-          <div class="entry-list">
-            <div class="entry">
-              <div class="entry-top">
-                <h3>GeoWorldModel</h3>
-                <span class="date">Jun 2026 - Present</span>
-              </div>
-              <p class="entry-meta">Core Leader</p>
-              <p>
-                Brings together Quaternary fossil records, modern biodiversity observations, present-day climate, and paleoclimate simulations. The goal is a unified representation of taxa, time, space, and climate for life–Earth system research.
-              </p>
-            </div>
-
-            <div class="entry">
-              <div class="entry-top">
-                <h3>SIGHT Project</h3>
-                <span class="date">May 2026 - Present</span>
-              </div>
-              <p class="entry-meta">Core Leader</p>
-              <p>
-                SIGHT turns generated views into evidence by actively testing spatial hypotheses and revising answers only with pose-grounded counterevidence.
-              </p>
-            </div>
-
-            <div class="entry">
-              <div class="entry-top">
-                <h3>Geo-Expert Project</h3>
-                <span class="date">Nov 2025 - May 2026</span>
-              </div>
-              <p class="entry-meta">Core Leader</p>
-              <p>
-                Led a domain-specific LLM project for expert-level geological reasoning, including framework
-                design, benchmark construction, and experimental iteration.
-              </p>
-            </div>
-
-            <div class="entry">
-              <div class="entry-top">
-                <h3>Motif Matching Project</h3>
-                <span class="date">Dec 2025 - May 2026</span>
-              </div>
-              <p class="entry-meta">Student Member</p>
-              <p>
-                Contributed to a robust CLIP test-time adaptation method using structure-semantic signatures
-                for out-of-distribution and cross-domain generalization.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="two-col">
-        <div class="side-label">Skills</div>
-        <div>
-          <h2>Technical skills</h2>
-          <ul class="skill-list">
-            <li><strong>Programming and frameworks:</strong> Python, PyTorch, MATLAB</li>
-            <li><strong>Engineering:</strong> Linux server deployment, multi-GPU computing resource scheduling</li>
-            <li><strong>Research tools:</strong> LaTeX, Microsoft Office, benchmark design, technical writing</li>
-            <li><strong>Workflow:</strong> Vibe Coding Workflow, collaborative documentation, experiment organization</li>
-          </ul>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="wrap">
-    <p>© 2026 Chenyou Guo · Last updated: August 2026</p>
+    <p>© 2026 Chenyou Guo · Last updated: November 2026</p>
   </footer>
 </body>
 </html>
